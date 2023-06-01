@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DegreeRadianConversion</title>
+    <script>
+      function degreesToRadians(degrees) {
+        var radians = degrees * (Math.PI / 180);
+        return radians;
+      }
+
+      function convertDegrees() {
+        var degreesInput = document.getElementById("degreesInput").value;
+        var result = degreesToRadians(degreesInput);
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Degrees to Radians Converter</h1>
+    <label for="degreesInput">Enter Degrees:</label>
+    <input type="number" id="degreesInput" />
+    <button onclick="convertDegrees()">Convert</button>
+    <p id="result"></p>
+  </body>
+</html>

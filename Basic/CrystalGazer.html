@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>crystalGazer</title>
+  <script>
+    function crystalGazer(numberOfChildren, partnerName, location, jobTitle) {
+      var outputElement = document.getElementById("output");
+      var message = `You will be a ${jobTitle} in ${location} and married to ${partnerName} with ${numberOfChildren} children.`;
+      outputElement.textContent = message;
+    }
+  </script>
+</head>
+<body>
+  <h1>Crystal Gazer</h1>
+  <button onclick="crystalGazer(2, 'Emma', 'New York', 'Software Engineer')">
+    Generate Prediction
+  </button>
+  <p id="output"></p>
+</html>

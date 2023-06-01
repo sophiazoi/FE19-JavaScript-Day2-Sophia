@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AreaVolumeBox</title>
+    <script>
+      function calculateBoxProperties(width, height, depth) {
+        var area = width * height;
+        var volume = width * height * depth;
+
+        return {
+          area: area,
+          volume: volume,
+        };
+      }
+
+      function calculateProperties() {
+        var widthInput = document.getElementById("widthInput").value;
+        var heightInput = document.getElementById("heightInput").value;
+        var depthInput = document.getElementById("depthInput").value;
+
+        var boxProperties = calculateBoxProperties(
+          parseFloat(widthInput),
+          parseFloat(heightInput),
+          parseFloat(depthInput)
+        );
+
+        document.getElementById("areaResult").innerHTML =
+          "The area of the box is: " + boxProperties.area;
+        document.getElementById("volumeResult").innerHTML =
+          "The volume of the box is: " + boxProperties.volume;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Box Properties Calculator</h1>
+    <label for="widthInput">Width:</label>
+    <input type="number" id="widthInput" />
+    <br />
+    <label for="heightInput">Height:</label>
+    <input type="number" id="heightInput" />
+    <br />
+    <label for="depthInput">Depth:</label>
+    <input type="number" id="depthInput" />
+    <br />
+    <button onclick="calculateProperties()">Calculate</button>
+    <br />
+    <p id="areaResult"></p>
+    <p id="volumeResult"></p>
+  </body>
+</html>
